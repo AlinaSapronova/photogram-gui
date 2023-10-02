@@ -1,0 +1,74 @@
+<h1><%= @name %></h1>
+
+
+<dl>
+  <dt>
+    ID
+  </dt>
+  <dd>
+    <%= @name.id %>
+  </dd>
+
+  <dt>
+    Edit user
+  </dt>
+  <dd>
+    <form action="/update_user/<%= @name.id %>" method="post">
+      <label for="browser_username">Username</label>
+      <input id="browser_username" type="text" name="input_username" value="anisa">
+
+      <button>Update user</button>
+    </form>
+  </dd>
+</dl>
+
+<h2>Own photos (<%= @name.own_photos.count%>)</h2>
+
+<table border="1">
+  <tbody><tr>
+    <th>
+      Image
+    </th>
+
+    <th>
+      Owner
+    </th>
+
+    <th>
+      Caption
+    </th>
+
+    <th>
+      Posted
+    </th>
+
+    <th>
+    </th>
+  </tr>
+
+  <tr>
+      <td>
+        <img src="<%= @name.own_photos.image %>%">
+      </td>
+
+      <td>
+        <%= @name %>
+      </td>
+
+      <td>
+        <%= @name.own_photos.caption %>
+      </td>
+
+      <td>
+        <%= @name.own_photos.created_at %>
+      </td>
+
+      <td>
+        <a href="/photos/<%= @name.own_photos.id %>">
+          Show details
+        </a>
+      </td>
+    </tr>
+
+</tbody>
+</table>
