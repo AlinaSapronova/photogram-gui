@@ -32,8 +32,6 @@ class UserController < ApplicationController
 
     @user_id = params.fetch("user_id")
     @username = params.fetch("input_username")
-
-
     updated_user = User.where(:id => @user_id)[0]
 
     updated_user.username = @username

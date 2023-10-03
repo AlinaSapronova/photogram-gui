@@ -7,7 +7,7 @@
     Image
   </dt>
   <dd>
-    <img src="<%=  @picture.image %>" height="300px">
+    <img src="<%= @picture.image %>" height="300px">
   </dd>
 
   <dt>
@@ -60,8 +60,8 @@
 
 <h2>Comments</h2>
 
-<table border = 1>
-  <tbody><tr>
+<table border="1">
+  <tr>
     <th>
       Commenter
     </th>
@@ -81,8 +81,8 @@
       <td><%= comment.body %></td>
       <td><%= comment.created_at %></td>
     </tr>
-<% end %>
-<tbody></table>
+ <% end %>
+</table>
 
 <h3>Add a new comment</h3>
 
@@ -91,7 +91,7 @@
   <input id="browser_photo_id" type="text" placeholder="Enter the photo ID" name="input_photo_id" value="<%= @picture.id %>">
 
   <label for="browser_author_id">Author ID</label>
-  <input id="browser_author_id" type="text" placeholder="Enter your author ID" name="input_author_id">
+  <input id="browser_author_id" type="text" placeholder="Enter your author ID" name="input_author_id" >
 
   <label for="browser_comment">Comment</label>
   <textarea id="browser_comment" type="text" placeholder="Enter a comment..." name="input_comment"></textarea>
